@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .clearfix:after {
   content: "";
   display: block;
@@ -9,7 +10,14 @@ body {
   color: black; }
 
 .container h1 {
-  float: left; }
+  float: left;
+  width: 100%; }
+  .container h1 a {
+    width: 100%;
+    display: block; }
+    .container h1 a img {
+      width: 33.3%;
+      margin-top: 15px; }
 
 .pc_menu {
   list-style: none;
@@ -20,18 +28,23 @@ body {
     display: inline-block; }
     .pc_menu li a {
       padding-left: 5px; }
+      .pc_menu li a img {
+        display: block;
+        padding: 0 5px; }
 
 @media (max-width: 550px) {
   .container h1 {
     float: none;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 0; }
 
   .pc_menu {
     display: none; }
 
   .sp_menu {
     list-style: none;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 0; }
     .sp_menu li {
       display: inline-block;
       margin: 5px; }
@@ -62,7 +75,11 @@ body {
 
 @media (min-width: 550px) {
   .sp_menu {
-    display: none; } }
+    display: none; }
+
+  #logo, #menu {
+    height: 80px;
+    margin-bottom: 20px; } }
 .cover img {
   width: 100%; }
 
@@ -94,7 +111,8 @@ body {
     padding: 12px;
     box-sizing: border-box; }
     .item_box .item_box_in .item_title {
-      font-size: 12px; }
+      font-size: 12px;
+      padding-bottom: 20px; }
       .item_box .item_box_in .item_title a {
         text-decoration: none;
         color: black; }
@@ -120,42 +138,46 @@ body {
     margin: 2px; }
     .guide_box .shipping_box .shipping_box_in h3 {
       color: #887f69;
-      font-size: 20px;
+      font-size: 16px;
       padding-top: 15px;
-      padding-left: 15px; }
+      padding-left: 15px;
+      font-family: "ヒラギノ角ゴ Pro W6"; }
     .guide_box .shipping_box .shipping_box_in .otodoke {
-      display: block;
-      width: 100%; }
+      display: block; }
   .guide_box .shipping_plan {
-    font-size: 15px;
     padding-left: 15px; }
     .guide_box .shipping_plan h4 {
       color: #887f69;
-      font-size: 15px;
-      margin-bottom: 5px; }
+      font-size: 12px;
+      margin-bottom: 5px;
+      font-family: "ヒラギノ角ゴ Pro W4"; }
     .guide_box .shipping_plan p {
       color: black;
-      font-size: 15px; }
+      font-size: 12px;
+      font-family: "ヒラギノ角ゴ Pro W3"; }
   .guide_box .pay_box {
     width: calc(100%/2 - 4px);
     background: white; }
     .guide_box .pay_box .pay_box_in h3 {
       color: #887f69;
-      font-size: 20px;
+      font-size: 16px;
       padding-top: 15px;
-      padding-left: 15px; }
+      padding-left: 15px;
+      font-family: "ヒラギノ角ゴ Pro W6"; }
     .guide_box .pay_box .pay_box_in .cards {
       width: 100%;
       display: block; }
     .guide_box .pay_box .pay_box_in h4 {
       color: #887f69;
-      font-size: 15px;
+      font-size: 12px;
       margin-bottom: 5px;
-      padding-left: 15px; }
+      padding-left: 15px;
+      font-family: "ヒラギノ角ゴ Pro W4"; }
     .guide_box .pay_box .pay_box_in p {
       color: black;
-      font-size: 15px;
-      padding-left: 15px; }
+      font-size: 12px;
+      padding-left: 15px;
+      font-family: "ヒラギノ角ゴ Pro W3"; }
 
 @media (max-width: 550px) {
   .guide_box .shipping_box {
@@ -171,6 +193,8 @@ body {
     display: block;
     width: 100%;
     margin-left: 20px; }
+    .serch_box .itemserch img {
+      margin-top: 20px; }
 
 form {
   width: 100%;
@@ -182,7 +206,7 @@ form {
 
 #searchinput {
   height: 30px;
-  background: #dcdcdc; }
+  background: #eeeeee; }
 
 input[type="submit"].button-primary {
   background: url(../images/top/search_icon.png);
@@ -192,20 +216,19 @@ input[type="submit"].button-primary {
   width: 15px;
   padding-left: 0.5px;
   top: 17px;
-  right: 10px; }
+  left: 74%; }
 
-@media (max-width: 550px) {
-  input[type="submit"].button-primary {
-    position: absolute;
-    left: 75%;
-    top: 38px; } }
 @media (max-width: 550px) {
   #sidemenue {
     margin-top: 10px; }
     #sidemenue .serch_box .itemserch {
       display: none; }
     #sidemenue .serch_box form {
-      padding: 30px; } }
+      padding: 30px; }
+
+  input[type="submit"].button-primary {
+    left: 69%;
+    top: 38px; } }
 .pagelink_box {
   display: block;
   padding: 10px 8px;
@@ -214,7 +237,7 @@ input[type="submit"].button-primary {
   background-image: url("../images/top/next_icon.png");
   background-repeat: no-repeat;
   background-position: 90% center;
-  margin-top: 5px; }
+  margin-top: 10px; }
   .pagelink_box a {
     width: calc(100% - 10px); }
 
@@ -226,12 +249,12 @@ input[type="submit"].button-primary {
   background-image: url("../images/top/down_icon.png");
   background-repeat: no-repeat;
   background-position: 90% center;
-  margin-top: 5px; }
+  margin-top: 10px; }
   .categories_box a {
     width: calc(100% - 10px); }
 
 .categories_mei {
-  margin-top: 5px; }
+  margin-top: 10px; }
   .categories_mei li {
     background: white;
     list-style: none;
@@ -243,18 +266,19 @@ input[type="submit"].button-primary {
     .categories_mei li a {
       display: block;
       padding: 10px 8px;
-      border-bottom: 0.5px solid #b0b0b0;
-      font-size: 14px;
+      border-bottom: 0.5px solid #f9f8f6;
+      font-size: 12px;
       text-decoration: none;
       color: black;
-      padding-left: 10%; }
+      padding-left: 10%;
+      font-family: "ヒラギノ角ゴ Pro W3"; }
 
 .info_box .infotop {
   display: block;
   padding: 10px 8px;
   background: #887f69;
   padding-left: 10%;
-  margin-top: 5px; }
+  margin-top: 10px; }
 .info_box #info_box_in {
   background: white;
   margin: 2px auto;
@@ -264,7 +288,8 @@ input[type="submit"].button-primary {
     color: black;
     font-size: 12px; }
   .info_box #info_box_in .more_btn {
-    text-align: center; }
+    text-align: center;
+    margin-top: 20px; }
 
 @media (max-width: 550px) {
   .info_box #info_box_in img {
@@ -273,30 +298,46 @@ input[type="submit"].button-primary {
   .info_box #info_box_in #info_content {
     float: left;
     width: 50%;
-    padding-left: 5px;
+    padding-left: 20px;
     box-sizing: border-box; }
     .info_box #info_box_in #info_content .more_btn {
       width: 150%; } }
+.container {
+  width: 100%; }
+
 .pagetop {
+  width: 100%;
   text-align: right;
   border-bottom: 1px solid #887f69;
   padding-top: 20px; }
 
-@media (max-width: 550px) {
-  .pagetop {
-    margin-top: 10px;
-    text-align: center; } }
+.foot_navi {
+  margin-top: 30px; }
+
 .foot_box .foot_navi {
+  width: 100%;
   text-align: center; }
   .foot_box .foot_navi li {
-    display: inline-block;
-    list-style: disc; }
+    display: contents; }
     .foot_box .foot_navi li a {
       color: black;
       font-size: 12px;
       padding-left: 10px;
       text-decoration: none; }
 
+@media (max-width: 550px) {
+  .pagetop {
+    margin-top: 30px;
+    text-align: center;
+    padding-bottom: 1px solid #887f69;
+    padding-bottom: 40px; }
+
+  .foot_navi {
+    width: 100%; }
+    .foot_navi li {
+      width: 50%; }
+      .foot_navi li a {
+        font-size: 22px; } }
 .copy {
   text-align: center;
   font-size: 10px;
@@ -319,22 +360,32 @@ input[type="submit"].button-primary {
   width: 100%;
   padding: 60px;
   background: white;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding-top: 0; }
   .product_box .product_name {
+    width: 100%;
     padding-bottom: 30px;
-    border-bottom: 0.5px solid #f9f8f6; }
+    border-bottom: 0.5px solid #f9f8f6;
+    padding-top: 40px;
+    padding-bottom: 1px solid #e3e8cf;
+    padding-bottom: 30px;
+    display: flex;
+    　justify-content: space-between; }
     .product_box .product_name h1 {
-      font-size: 20px;
-      float: left; }
+      width: 50%;
+      font-size: 14px;
+      font-family: "ヒラギノ角ゴ Pro W6"; }
     .product_box .product_name .product_number {
       color: #b0b0b0;
-      float: right; }
+      font-size: 10px;
+      font-family: "ヒラギノ角ゴ Pro W3";
+      margin-left: auto; }
 
 #product_img {
   width: 100%;
   margin-top: 20px;
   display: flex;
-  border-bottom: 0.5px solid #887f69; }
+  border-bottom: 1px solid #887f69; }
 
 .product_img_main {
   padding: 0 5px 0 0;
@@ -355,19 +406,24 @@ input[type="submit"].button-primary {
 @media (max-width: 550px) {
   .product_box {
     width: 100%;
-    padding: 20px; }
+    padding: 20px;
+    padding-top: 0; }
     .product_box .product_name {
       display: block;
       width: 100%;
-      text-align: left; }
+      text-align: left;
+      padding-top: 20px;
+      padding-bottom: 10px; }
       .product_box .product_name h1 {
-        font-size: 20px;
-        float: left; }
+        font-size: 14px;
+        font-family: "ヒラギノ角ゴ Pro W6";
+        width: 100%;
+        text-align: left; }
       .product_box .product_name .product_number {
-        font-size: 15px;
+        font-size: 10px;
         display: block;
         width: 100%;
-        margin-top: -10px; }
+        font-family: "ヒラギノ角ゴ Pro W3"; }
 
   #product_img {
     display: block; }
@@ -393,10 +449,11 @@ table.a {
   table.a th {
     background: #f9f8f6;
     text-align: center;
-    border: solid 1px #b0b0b0; }
+    border: solid 1px #887f69;
+    color: #887f69; }
   table.a td {
     text-align: center;
-    border: solid 1px #b0b0b0; }
+    border: solid 1px #887f69; }
 
 .checkbox {
   border: #f9f8f6; }
@@ -414,24 +471,26 @@ td:last-child {
 
 .price_box_in {
   width: 60%;
-  border-top: 0.5px solid #b0b0b0;
-  border-bottom: 0.5px solid #b0b0b0;
+  border-top: 1px solid #887f69;
+  border-bottom: 1px solid #887f69;
   text-align: center;
   display: flex; }
 
 .price_title {
   width: calc(100%/4);
-  padding-top: 15px; }
+  padding-top: 23px; }
 
 .price_number {
-  width: calc(100%/2);
-  font-size: 20px;
+  width: 100%;
+  font-size: 14px;
   color: red;
-  padding-top: 10px;
-  padding-left: 20px; }
+  padding-top: 20px;
+  padding-left: 20px;
+  font-family: "ヒラギノ角ゴ Pro W3"; }
   .price_number a {
-    font-size: 15px;
-    color: black; }
+    font-size: 14px;
+    color: black;
+    font-family: "ヒラギノ角ゴ Pro W3"; }
 
 .pc_add_cart {
   width: 40%; }
@@ -439,7 +498,7 @@ td:last-child {
 .quantity_box {
   width: 100%;
   height: 70px;
-  border-bottom: 0.5px solid #b0b0b0; }
+  border-bottom: 1px solid #887f69; }
 
 .quantity_box_in {
   width: 70%;
@@ -462,7 +521,7 @@ input[type="number"] {
 
 .product_explain {
   width: 100%;
-  border-bottom: 0.5px solid #b0b0b0;
+  border-bottom: 1px solid #887f69;
   font-size: 20px;
   padding-top: 40px;
   padding-bottom: 10px;
@@ -484,11 +543,12 @@ table.b {
     width: 30%;
     background: #f9f8f6;
     text-align: center;
-    border: solid 1px #b0b0b0; }
+    border: solid 1px #887f69;
+    color: #887f69; }
   table.b td {
     width: 70%;
     text-align: center;
-    border: solid 1px #b0b0b0; }
+    border: solid 1px #887f69; }
 
 @media (max-width: 550px) {
   .color_title {
@@ -504,7 +564,8 @@ table.b {
     padding-top: 25px; }
 
   .price_number {
-    padding-top: 20px; }
+    padding-top: 20px;
+    font-size: 22px; }
 
   .quantity_box_in {
     width: 100%; }
@@ -514,6 +575,10 @@ table.b {
 
   input[type="number"] {
     width: 130px; } }
+.product_head_in {
+  margin: 0;
+  margin: 10px 0; }
+
 @media (min-width: 550px) {
   .sp_add_cart {
     display: none; }
@@ -522,10 +587,13 @@ table.b {
     display: none; } }
 @media (max-width: 550px) {
   .recent {
-    text-align: center; }
+    text-align: center;
+    margin-top: 30px; }
     .recent h2 {
       display: none; } }
 @media (min-width: 550px) {
+  .cate_img h2 {
+    margin-bottom: 0; }
   .cate_img a {
     display: none; } }
 @media (max-width: 550px) {
@@ -538,14 +606,45 @@ table.b {
   padding-top: 20px; }
 
 .back {
-  width: 20%; }
+  height: 40px;
+  width: 120px;
+  background: #887f69;
+  position: relative; }
+  .back a {
+    color: #f9f8f6;
+    font-size: 14px;
+    text-decoration: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    padding: 10px;
+    text-align: center; }
 
 .next {
-  width: 20%; }
+  height: 40px;
+  width: 120px;
+  background: #887f69;
+  position: relative; }
+  .next a {
+    color: #f9f8f6;
+    font-size: 14px;
+    text-decoration: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    padding: 10px;
+    text-align: center; }
 
 @media (max-width: 550px) {
   .back, .next {
-    width: 40%;
+    width: 35%;
+    height: 20px;
     padding-bottom: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

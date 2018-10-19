@@ -17,10 +17,19 @@ body{
    font-size:12px;
    color:black;
 }
+
 .container{
     h1{
         float:left;
-       
+        width:100%;
+        a{
+            width:100%;
+            display:block;
+            img{
+                width:33.3%;
+                margin-top:15px;
+            }
+        }
     }
 }
 .pc_menu{
@@ -32,6 +41,10 @@ body{
         display:inline-block;
         a{
             padding-left:5px;
+            img{
+                display:block;
+                padding: 0 5px;
+            }
         }
     }
 }
@@ -39,6 +52,7 @@ body{
     .container h1 {
      float:none;
      text-align:center;
+     margin-bottom: 0;
     }
      .pc_menu{
         display:none;
@@ -46,6 +60,7 @@ body{
      .sp_menu{
          list-style:none;
          text-align:center;
+         margin-bottom: 0;
          li{
              display:inline-block;
              margin:5px;
@@ -92,7 +107,10 @@ body{
      .sp_menu{
          display:none;
      }
-     
+     #logo,#menu{
+    height: 80px;
+    margin-bottom: 20px;
+     }
  }
  .cover{
      img{
@@ -143,6 +161,7 @@ body{
      
  .item_title{
      font-size:12px;
+     padding-bottom: 20px;
     
      a{
          text-decoration:none;
@@ -185,27 +204,28 @@ body{
        .shipping_box_in{
            h3{
            color:$khaki;
-           font-size:20px;
+           font-size:16px;
            padding-top:15px;
            padding-left:15px;
+           font-family:"ヒラギノ角ゴ Pro W6";
            }
        .otodoke{
            display:block;
-           width: 100%;
            }
        }
  }
        .shipping_plan{
-           font-size:15px;
            padding-left:15px;
            h4{
            color:$khaki;
-           font-size:15px;
+           font-size:12px;
            margin-bottom :5px; 
+           font-family:"ヒラギノ角ゴ Pro W4";
            }
        p{
            color:black;
-           font-size:15px;
+           font-size:12px;
+           font-family:"ヒラギノ角ゴ Pro W3";
        }
        }
        .pay_box{
@@ -214,10 +234,10 @@ body{
        .pay_box_in{
             h3{
            color:$khaki;
-           font-size:20px;
+           font-size:16px;
            padding-top:15px;
            padding-left:15px;
-            
+           font-family:"ヒラギノ角ゴ Pro W6";
            }
        .cards{
           width:100%;
@@ -225,14 +245,16 @@ body{
        }
        h4{
            color:$khaki;
-           font-size:15px;
+           font-size:12px;
            margin-bottom :5px; 
            padding-left:15px;
+           font-family:"ヒラギノ角ゴ Pro W4";
            }
        p{
            color:black;
-           font-size:15px;
+           font-size:12px;
            padding-left:15px;
+           font-family:"ヒラギノ角ゴ Pro W3";
        }
        }
        
@@ -258,6 +280,9 @@ body{
      .itemserch{
          display:block;
          width:100%;
+         img{
+             margin-top:20px;
+         }
         
          margin-left:20px;
      }
@@ -273,7 +298,7 @@ body{
      
 #searchinput{
              height:30px;
-             background:#dcdcdc;
+             background:#eeeeee;
 }
 input[type="submit"].button-primary{
     background: url(../images/top/search_icon.png);
@@ -283,16 +308,8 @@ input[type="submit"].button-primary{
     width: 15px;
     padding-left: 0.5px;
     top: 17px;
-    right: 10px;
+    left:74%;
 }
-@media (max-width: 550px){
-    input[type="submit"].button-primary{
-    position: absolute;
-    left: 75%;
-    top: 38px;
-}
-}
-    
 
  @media (max-width: 550px){
      #sidemenue{
@@ -306,6 +323,10 @@ input[type="submit"].button-primary{
          }
      }
  }
+  input[type="submit"].button-primary{
+    left: 69%;
+    top: 38px;
+}
  }
 .pagelink_box{
     display: block;
@@ -315,7 +336,7 @@ input[type="submit"].button-primary{
     background-image: url("../images/top/next_icon.png");
     background-repeat: no-repeat;
     background-position: 90% center;
-    margin-top:5px;
+    margin-top:10px;
 a{
     width:calc(100% - 10px);
 }
@@ -328,13 +349,13 @@ a{
     background-image: url("../images/top/down_icon.png");
     background-repeat: no-repeat;
     background-position: 90% center;
-    margin-top:5px;
+    margin-top:10px;
 a{
     width:calc(100% - 10px);
 }
     }
 .categories_mei{
-    margin-top:5px;
+    margin-top:10px;
     li{
       background:white;
       list-style:none;
@@ -346,11 +367,12 @@ a{
       a{
         display:block;
         padding:10px 8px;
-        border-bottom: 0.5px solid $gray;
-        font-size:14px;
+        border-bottom: 0.5px solid $white;
+        font-size:12px;
         text-decoration:none;
         color:black;
         padding-left:10%;
+        font-family:"ヒラギノ角ゴ Pro W3";
       }
     }
 }
@@ -360,7 +382,7 @@ a{
     padding: 10px 8px;
     background:$khaki;
     padding-left:10%;
-     margin-top:5px;
+     margin-top:10px;
      }
      #info_box_in{
          background:white;
@@ -375,6 +397,7 @@ a{
          }
          .more_btn{
             text-align:center;
+            margin-top: 20px;
          }
      }
 }
@@ -388,7 +411,7 @@ a{
             #info_content{
                 float:left;
                 width:50%;
-                padding-left: 5px;
+                padding-left: 20px;
                 box-sizing: border-box;
                 .more_btn{
                     width:150%;
@@ -397,23 +420,26 @@ a{
         }
     }
 }
+.container {
+    width: 100%;
+}
 .pagetop{
+    width:100%;
     text-align: right;
-    border-bottom: 1px solid $khaki;
+    border-bottom: 1px solid #887f69;
     padding-top:20px;
 }
-@media (max-width: 550px){
-    .pagetop{
-    margin-top:10px;
-    text-align: center;
-    }
+.foot_navi{
+    margin-top:30px;
 }
+
 .foot_box{
     .foot_navi{
+        width:100%;
         text-align:center;
         li{
-           display:inline-block;
-           list-style:disc;
+           
+          display: contents;
             a{
             color:black;
             font-size:12px;
@@ -423,6 +449,23 @@ a{
         }
     }
     
+}
+@media (max-width: 550px){
+    .pagetop{
+    margin-top:30px;
+    text-align: center;
+    padding-bottom: 1px solid #887f69;
+    padding-bottom:40px;
+    }
+    .foot_navi{
+        width:100%;
+        li{
+            width:50%;
+            a{
+                font-size:22px;
+            }
+        }
+    }
 }
 .copy{
     text-align:center;
@@ -454,16 +497,26 @@ a{
     padding:60px;
     background:white;
     box-sizing: border-box;
+    padding-top: 0;
     .product_name{
+        width:100%;
         padding-bottom: 30px;
         border-bottom: 0.5px solid $white;
+        padding-top: 40px;
+        padding-bottom: 1px solid #e3e8cf;
+    padding-bottom:30px;
+    display:flex;
+  　justify-content:space-between;
     h1{
-        font-size:20px;
-        float:left;
+        width:50%;
+        font-size:14px;
+        font-family:"ヒラギノ角ゴ Pro W6";
     }
     .product_number{
         color:$gray;
-        float:right;
+       font-size:10px;
+       font-family:"ヒラギノ角ゴ Pro W3";
+       margin-left: auto;
     }
     }
     }
@@ -471,7 +524,7 @@ a{
         width:100%;
         margin-top:20px;
         display:flex;
-        border-bottom: 0.5px solid $khaki;
+        border-bottom: 1px solid $khaki;
     }
     .product_img_main{
         padding: 0 5px 0 0;
@@ -498,19 +551,24 @@ a{
     .product_box{
         width: 100%;
         padding:20px;
+            padding-top: 0;
         .product_name{
             display:block;
             width:100%;
             text-align:left;
+            padding-top:20px;
+            padding-bottom:10px;
              h1{
-        font-size:20px;
-        float:left;
+        font-size:14px;
+        font-family:"ヒラギノ角ゴ Pro W6";
+        width: 100%;
+        text-align: left;
     }
     .product_number{
-        font-size:15px;
+        font-size:10px;
          display:block;
             width:100%;
-                margin-top: -10px;
+                font-family:"ヒラギノ角ゴ Pro W3";
     }
     
         }
@@ -541,10 +599,11 @@ table.a{
 th{
     background:$white;
      text-align:center;
-     border: solid 1px $gray;
+     border: solid 1px $khaki;
+     color:$khaki;
 }
 td{text-align:center;
-     border: solid 1px $gray;
+     border: solid 1px $khaki;
 }
 }
 .checkbox{
@@ -564,25 +623,27 @@ td:last-child {
 }
 .price_box_in{
     width:60%;
-    border-top: 0.5px solid $gray;
-    border-bottom: 0.5px solid $gray;
+    border-top: 1px solid $khaki;
+    border-bottom: 1px solid $khaki;
     text-align:center;
     display: flex;
 }
 .price_title{
     width:calc(100%/4);
-        padding-top: 15px;
+        padding-top: 23px;
     
 }
 .price_number{
-    width:calc(100%/2);
-    font-size:20px;
+    width:100%;
+    font-size:14px;
     color:red;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-left:20px;
+    font-family:"ヒラギノ角ゴ Pro W3";
     a{
-        font-size:15px;
+        font-size:14px;
         color:black;
+        font-family:"ヒラギノ角ゴ Pro W3";
     }
 }
 .pc_add_cart{
@@ -591,7 +652,7 @@ td:last-child {
 .quantity_box{
     width:100%;
     height:70px;
-    border-bottom: 0.5px solid $gray;
+    border-bottom: 1px solid $khaki;
 }
 .quantity_box_in{
     width:70%;
@@ -614,7 +675,7 @@ input[type="number"]{
 }
 .product_explain{
      width:100%;
-     border-bottom: 0.5px solid $gray;
+     border-bottom: 1px solid $khaki;
     font-size:20px;
     padding-top:40px;
     padding-bottom:10px;
@@ -638,12 +699,13 @@ table.b{
         width:30%;
         background:$white;
      text-align:center;
-     border: solid 1px $gray;
+     border: solid 1px $khaki;
+     color:$khaki;
     }
     td{
         width:70%;
      text-align:center;
-     border: solid 1px $gray;
+     border: solid 1px $khaki;
     }
 }
 @media (max-width: 550px){
@@ -661,6 +723,7 @@ table.b{
 }
 .price_number {
     padding-top: 20px;
+    font-size:22px;
 }
 .quantity_box_in {
     width:100%;
@@ -672,6 +735,11 @@ input[type="number"] {
     width: 130px;
 }
 }
+.product_head_in{
+    margin: 0;
+    margin:10px 0;
+}
+
 @media (min-width: 550px) {
     .sp_add_cart{
         display:none;
@@ -685,6 +753,7 @@ input[type="number"] {
 @media (max-width: 550px){
     .recent{
             text-align: center;
+            margin-top: 30px;
         h2{
             display:none;
         }
@@ -692,6 +761,9 @@ input[type="number"] {
 }
 @media (min-width: 550px) {
     .cate_img{
+        h2{
+        margin-bottom: 0;
+        }
         a{
             display:none;
         }
@@ -711,14 +783,47 @@ input[type="number"] {
     padding-top: 20px;
 }
 .back{
-    width:20%;
+    height:40px;
+    width:120px;
+    background:$khaki;
+    position: relative;
+    a{
+        color:$white;
+        font-size:14px;
+        text-decoration:none;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+    }
 }
 .next{
-    width:20%;
+    height:40px;
+    width:120px;
+    background:$khaki;
+    position: relative;
+    a{
+        color:$white;
+        font-size:14px;
+        text-decoration:none;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+    }
 }
 @media (max-width: 550px){
     .back,.next{
-        width:40%;
+        width: 35%;
+        height: 20px;
         padding-bottom:20px;
     }
 }
